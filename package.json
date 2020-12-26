@@ -19,7 +19,7 @@
   },
   "scripts": {
     "build-background": "tsc -p back.tsconfig.json && webpack --config ./webpack-background.config.js",
-    "dev": "yarn build-background && node ./build-script.js --mode false",
+    "start-back": "nodemon --exec \"yarn build-background && node ./build-script.js --mode false\" ./background -e ts",
     "newversion": "npm version patch && node ./build-script.js --mode false",
     "start": "react-scripts start",
     "build": "yarn build-background && node ./build-script.js --mode true && react-scripts build",
@@ -47,6 +47,7 @@
   "devDependencies": {
     "arg": "^5.0.0",
     "args": "^5.0.1",
+    "nodemon": "^2.0.6",
     "webpack-cli": "^4.3.0"
   }
 }

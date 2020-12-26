@@ -24,13 +24,11 @@ module.exports = {
     mode: 'production',
     output: {
         // libraryTarget: "commonjs2",
-        // libraryExport: 'default',
+        libraryExport: 'default',
         // library: 'linkedinbot',
-        libraryTarget: 'commonjs2',
+        libraryTarget: 'var',
         path: path.resolve(__dirname, 'public'),
         filename: `background.js`,
         publicPath: "*/"
     },
 };
-
-// uglifyjs --compress --mangle -- input.js
