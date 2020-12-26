@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "InboxSync",
+    "description": "Sync your Linkedin messages with your CRM",
+    "version": "0.1.1",
+    "browser_action": {
+        "default_popup": "http://localhost:3000",
+        "default_title": "Manage Linkedin message"
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
+    "icons": {
+        "16": "logo-small.png",
+        "48": "logo-small.png",
+        "128": "logo-small.png"
+    },
+    "content_security_policy": "script-src 'self' 'sha256-GgRxr...'; object-src 'self'",
+    "permissions": [
+        "storage"
+    ]
+}
