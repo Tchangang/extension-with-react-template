@@ -19,8 +19,8 @@
   },
   "scripts": {
     "build-background": "tsc -p back.tsconfig.json && webpack --config ./webpack-background.config.js",
-    "start-back": "nodemon --exec \"yarn build-background && node ./build-script.js --mode false\" ./background -e ts",
-    "newversion": "npm version patch && node ./build-script.js --mode false",
+    "start-back": "nodemon --exec \"yarn build-background && node ./build-script.js --mode true\" ./background -e ts",
+    "newversion": "npm version patch && node ./build-script.js --mode true",
     "start": "react-scripts start",
     "build": "yarn build-background && node ./build-script.js --mode true && react-scripts build",
     "test": "react-scripts test",
